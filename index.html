@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="title">Suraga Devraj</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        #content {
+            position: relative;
+            margin-top: 10vh;
+            font-size: 24px;
+            color: #000;
+            z-index: 10;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        #icons {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        #icons a {
+            margin-right: 20px;
+            text-decoration: none;
+            color: #000;
+        }
+        #icons img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+        }
+        #particles-js {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+        #profile-photo {
+            width: 120px;
+            height: 100px;
+            border: 2px solid #000;
+            border-radius: 10px;
+            margin: 20px auto;
+        }
+        #main-heading {
+            color: #000;
+            font-size: 36px;
+            font-weight: bold;
+        }
+        #intro {
+            font-size: 16px;
+        }
+
+        @media (max-width: 768px) {
+            #content {
+                margin-top: 5vh;
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <img src="https://i.imgur.com/JJreJEm.jpg" alt="Profile Photo" id="profile-photo">
+    <div id="main-heading">Suraga Devraj</div>
+    <div id="content">
+        <p id="intro">👋 hola! My name is Suraaga, my pronouns are she/her. I'm a 19-year-old from Bangalore India; I'll be moving to the United States to further my learning in the fields of my interests. I started coding in the year 2019 and not stopped since then, At weekends I will be mostly at hackathons.I am in hope of making this website a digital diary! Wanna reach me? I'm mostly active in my emails!!</p>
+    </div>
+    
+    <div id="icons">
+        <a href="https://www.linkedin.com/in/Suraga-Devraj" target="_blank"><img src="https://i.imgur.com/7Ymwvzw.png" alt="LinkedIn Logo"></a>
+        <a href="mailto:Suraga@codology.org"><img src="https://i.imgur.com/FCOlh5x.png" alt="Gmail Logo"></a>
+        <a href="https://open.spotify.com/user/your-spotify-username" target="_blank"><img src="https://i.imgur.com/v65Z6sF.png" alt="Spotify Logo"></a>
+    </div>
+
+    <div id="particles-js"></div>
+
+    <script>
+        const titleElement = document.getElementById('title');
+        titleElement.style.display = 'none';
+    </script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+      particlesJS("particles-js", {
+        particles: {
+            number: {
+                value: 30,
+            },
+            color: {
+                value: "#000",
+            },
+            shape: {
+                type: "circle",
+            },
+            opacity: {
+                value: 0.5,
+            },
+            size: {
+                value: 3,
+            },
+            line_linked: {
+                enable: true,
+                distance: 200,
+                color: "#000",
+                opacity: 0.4,
+                width: 2,
+            }
+        },
+        interactivity: {
+            events: {
+                onhover: {
+                    enable: true,
+                    mode: "grab",
+                },
+            }
+        }
+      });
+    </script>
+</body>
+</html>
