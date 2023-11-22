@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title id="title">Suraga Devraj</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barricada:wght@300&display=swap">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Barricada Pro', sans-serif;
             text-align: center;
             background-color: #fff;
             margin: 0;
@@ -29,24 +30,19 @@
             display: flex;
             flex-direction: row;
             justify-content: center;
+            z-index: 20; /* Ensure icons are above particles */
         }
-        #icons a {
+        .icon-container {
             margin-right: 20px;
-            text-decoration: none;
+            transition: transform 0.3s ease-in-out; /* Added a subtle transform transition */
+        }
+        .icon-container:hover {
+            transform: scale(1.2); /* Increase size on hover */
+        }
+        .icon-text {
             color: #000;
-        }
-        #icons img {
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-        }
-        #particles-js {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 0;
+            text-decoration: none;
+            font-size: 16px;
         }
         #profile-photo {
             width: 120px;
@@ -70,19 +66,28 @@
                 font-size: 18px;
             }
         }
+
+        #particles-js {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0; /* Set z-index to 0 for particles to be below other elements */
+        }
     </style>
 </head>
 <body>
     <img src="https://i.imgur.com/JJreJEm.jpg" alt="Profile Photo" id="profile-photo">
-    <div id="main-heading">Suraga Devraj</div>
+    <div id="main-heading">Suraga DevRaj</div>
     <div id="content">
         <p id="intro">👋 hola! My name is Suraaga, my pronouns are she/her. I'm a 19-year-old from Bangalore India; I'll be moving to the United States to further my learning in the fields of my interests. I started coding in the year 2019 and not stopped since then, At weekends I will be mostly at hackathons.I am in hope of making this website a digital diary! Wanna reach me? I'm mostly active in my emails!!</p>
     </div>
     
     <div id="icons">
-        <a href="https://www.linkedin.com/in/Suraga-Devraj" target="_blank"><img src="https://i.imgur.com/7Ymwvzw.png" alt="LinkedIn Logo"></a>
-        <a href="mailto:Suraga@codology.org"><img src="https://i.imgur.com/FCOlh5x.png" alt="Gmail Logo"></a>
-        <a href="https://open.spotify.com/user/316ufery73ddlxrmq76wpobantym?si=p0GC8ZZlRp6rk68h7qlQBw" target="_blank"><img src="https://i.imgur.com/v65Z6sF.png" alt="Spotify Logo"></a>
+        <div class="icon-container"><a class="icon-text" href="https://www.linkedin.com/in/Suraga-Devraj" target="_blank">LinkedIn</a></div>
+        <div class="icon-container"><a class="icon-text" href="mailto:Suraga@codology.org">Gmail</a></div>
+        <div class="icon-container"><a class="icon-text" href="https://open.spotify.com/user/316ufery73ddlxrmq76wpobantym?si=p0GC8ZZlRp6rk68h7qlQBw" target="_blank">Spotify</a></div>
     </div>
 
     <div id="particles-js"></div>
@@ -130,3 +135,4 @@
     </script>
 </body>
 </html>
+
