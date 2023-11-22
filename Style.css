@@ -1,0 +1,39 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+    animation: roll 10s linear infinite;
+}
+
+#content {
+    position: relative;
+    margin-top: 10vh;
+    font-size: 24px;
+    color: #000;
+    z-index: 10;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* ... other styles remain unchanged ... */
+
+@media (max-width: 768px) {
+    #content {
+        margin-top: 5vh;
+        font-size: 18px;
+    }
+}
+
+@keyframes roll {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
